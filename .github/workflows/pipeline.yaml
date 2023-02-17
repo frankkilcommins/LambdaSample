@@ -12,7 +12,7 @@ on:
 env:
   PIPELINE_USER_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  SAM_TEMPLATE: book-api/template.yaml
+  SAM_TEMPLATE: books-api/template.yaml
   TESTING_STACK_NAME: books-api-dev
   TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-N4C4I53NYPV7
   TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-1T6ILOT1T6KZM
