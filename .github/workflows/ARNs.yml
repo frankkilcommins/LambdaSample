@@ -13,6 +13,7 @@ env:
   TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-N4C4I53NYPV7
   TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-1T6ILOT1T6KZM
   TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-artifactsbucket-24tjq4tlw45r
+  TESTING_REGION: eu-west-1
    
 jobs:
   setupARNs:
