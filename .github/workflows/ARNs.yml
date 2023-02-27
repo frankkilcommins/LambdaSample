@@ -7,6 +7,7 @@ env:
   SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_REGION: eu-west-1
   APP_ID: books-api
+  PIPELINE_USER_ARN: arn:aws:iam::516153165611:user/frank-smartbear
   
   
 jobs:
@@ -21,4 +22,14 @@ jobs:
         aws-region: ${{AWS_REGION}}
     
     
-    
+    - name: Deploy to roles via CloudFormation
+      uses: aws-actions/aws-cloudformation-github-deploy@v1
+      with:
+        name: PipelineExecutionRoles
+        template: service-role.yaml
+        no-fail-on-empty-changeset: "1"
+        parameter-overrides: >-
+          CreateImageRepository=false,
+          CreateNewOidcProvider=false,
+          PipelineUserArn=${{ PIPELINE_USER_ARN }},
+          UseOidcProvider=false   
