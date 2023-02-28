@@ -11,6 +11,7 @@ on:
     branches:
       - 'feature**'
 
+
 env:
   PIPELINE_USER_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -23,7 +24,7 @@ env:
   TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-actions-dev-CloudFormationExecutionRole
   TESTING_ARTIFACTS_BUCKET: aws-actions-dev-artifactsbucket
   
-    # If there are functions with "Image" PackageType in your template,
+  ## If there are functions with "Image" PackageType in your template,
   # uncomment the line below and add "--image-repository ${TESTING_IMAGE_REPOSITORY}" to
   # testing "sam package" and "sam deploy" commands.
   # TESTING_IMAGE_REPOSITORY = '0123456789.dkr.ecr.region.amazonaws.com/repository-name'
