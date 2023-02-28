@@ -14,9 +14,14 @@ env:
   PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   SAM_TEMPLATE: books-api/template.yaml
   TESTING_STACK_NAME: books-api-dev
-  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-N4C4I53NYPV7
-  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-1T6ILOT1T6KZM
-  TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-artifactsbucket-24tjq4tlw45r
+  #TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-N4C4I53NYPV7
+  #TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-1T6ILOT1T6KZM
+  #TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-artifactsbucket-24tjq4tlw45r
+  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-actions-dev-PipelineExecutionRole
+  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::516153165611:role/aws-actions-dev-CloudFormationExecutionRole
+  TESTING_ARTIFACTS_BUCKET: aws-actions-dev-artifactsbucket
+  
+  
   # If there are functions with "Image" PackageType in your template,
   # uncomment the line below and add "--image-repository ${TESTING_IMAGE_REPOSITORY}" to
   # testing "sam package" and "sam deploy" commands.
